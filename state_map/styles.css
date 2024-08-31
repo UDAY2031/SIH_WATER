@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#map-container {
+    position: relative;
+    display: block; /* Ensure it takes up the full width */
+    width: 100vw; /* Make it 1.5 times as large as before */
+    max-width: 1200px; /* Adjust max-width accordingly */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the map */
+}
+
+svg {
+    width: 100%; /* Fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+path {
+    fill: #9cd6f3; /* Default color for states */
+    stroke: #000; /* Border color */
+    stroke-width: 1;
+    cursor: pointer;
+}
+
+path:hover {
+    fill: #0da0ea; /* Color on hover */
+}
+
+.tooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    pointer-events: none;
+}
