@@ -43,3 +43,28 @@ path:hover {
     display: none;
     pointer-events: none;
 }
+.progress-bar {
+    height: 20px;
+    color: white;
+    text-align: center;
+    line-height: 20px; /* Center text vertically */
+    border-radius: 5px;
+    margin-top: 5px;
+}
+path {
+    transition: filter 0.3s ease;
+}
+
+path:hover {
+    filter: none !important;
+}
+
+#map-container path {
+    filter: blur(3px); /* Apply blur to all paths initially */
+}
+
+#map-container path:hover {
+    filter: none; /* Remove blur on hover */
+}
+
+
