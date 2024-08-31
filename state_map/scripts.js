@@ -11,14 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
             tooltip.innerHTML = `<strong>${state}</strong><br>Districts: ${districts}<br>Dams: ${dams}`;
             tooltip.style.display = 'block';
 
-            // Position the tooltip near the mouse cursor
             const rect = e.target.getBoundingClientRect();
             tooltip.style.top = `${rect.top + window.scrollY}px`;
-            tooltip.style.left = `${rect.left + window.scrollX + e.target.getBBox().width / 2}px`;
+            tooltip.style.left = `${rect.left + window.scrollX}px`;
         });
 
-        path.addEventListener('mouseout', () => {
+        path.addEventListener('mouseleave', () => {
             tooltip.style.display = 'none';
+        });
+
+        path.addEventListener('mousemove', (e) => {
+            tooltip.style.top = `${e.pageY + 10}px`;
+            tooltip.style.left = `${e.pageX + 10}px`;
+        });
+
+        // Handle state click to open the new data page
+        path.addEventListener('click', (e) => {
+            const state = e.target.id;
+            window.location.href = `data_page.html?state=${encodeURIComponent(state)}`;
         });
     });
 });
