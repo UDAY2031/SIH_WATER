@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 95%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #082a45;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-image: url("https://media.istockphoto.com/id/1454334998/vector/karnataka-map-white-paper-cut-out-on-blue-background.jpg?s=612x612&w=0&k=20&c=q6i4HFj_lalRCpbu-xMVul0USemJ3QlkoJ1Gt-bT2Os=");
+    background-size: contain; /* Adjusts the image size */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-blend-mode: lighten; /* Makes sure the image blends lightly with the table */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1em;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background so text is readable */
+}
+
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    color: #34495e;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    line-height: 20px;
+    font-weight: bold;
+    transition: width 0.6s ease;
+}
+
+.red { background-color: #e74c3c; }
+.yellow { background-color: #f1c40f; }
+.green { background-color: #2ecc71; }
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #000;
+}
+
+.legend .red { background-color: #e74c3c; }
+.legend .yellow { background-color: #f1c40f; }
+.legend .green { background-color: #2ecc71; }
+
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>KARNATAKA STATE RESERVOIR DATA</h1>    
+  
+    
+    <div class="legend">
+        <span class="red"></span> 0 to 25%
+        <span class="yellow"></span> 25 to 50%
+        <span class="green"></span> 50 to 100%
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>District</th>
+                <th>Reservoir Name</th>
+                <th>Agency Name</th>
+                <th>Date</th>
+                <th>FRL</th>
+                <th>Live Cap FRL</th>
+                <th>Current Live Storage</th>
+                <th>Progress</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Include the progress bar and data here -->
+            <tr>
+                <td>Bagalkote</td>
+                <td>Almatti Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>519.6</td>
+                <td>3.105</td>
+                <td>1.4137204611</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 45%;">45%</span></div></td>
+            </tr>
+            <tr>
+                <td>Bagalkot</td>
+                <td>Almatti Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>519.6</td>
+                <td>3.105</td>
+                <td>0.9116442308</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 30%;">30%</span></div></td>
+            </tr>
+            <tr>
+                <td>Bagalkote</td>
+                <td>Almatti Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>519.6</td>
+                <td>3.105</td>
+                <td>0.7996293103</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 25%;">25%</span></div></td>
+            </tr>
+            <tr>
+                <td>Chikkamagaluru</td>
+                <td>Bhadra Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>657.76</td>
+                <td>1.785</td>
+                <td>0.9176517241</td>
+                <td><div class="progress-bar"><span class="green" style="width: 51%;">51%</span></div></td>
+            </tr>
+            <tr>
+                <td>Chikkamagaluru</td>
+                <td>Bhadra Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>657.76</td>
+                <td>1.785</td>
+                <td>0.5398487264</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 30%;">30%</span></div></td>
+            </tr>
+            <tr>
+                <td>Uttara Kannada</td>
+                <td>Gerusoppa Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>55</td>
+                <td>0.13</td>
+                <td>0.0985379598</td>
+                <td><div class="progress-bar"><span class="red" style="width: 30%;">30%</span></div></td>
+            </tr>
+            <tr>
+                <td>Uttara Kannada</td>
+                <td>Gerusoppa Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>55</td>
+                <td>0.13</td>
+                <td>0.0965510092</td>
+                <td><div class="progress-bar"><span class="red" style="width: 25%;">25%</span></div></td>
+            </tr>
+            <tr>
+                <td>Belagavi</td>
+                <td>GhatPrabha\Hidkal Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>662.95</td>
+                <td>1.391</td>
+                <td>0.7116322478</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 35%;">35%</span></div></td>
+            </tr>
+            <tr>
+                <td>Belagavi</td>
+                <td>GhatPrabha\Hidkal Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>662.95</td>
+                <td>1.391</td>
+                <td>0.6694710849</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 30%;">30%</span></div></td>
+            </tr>
+            <tr>
+                <td>Kodagu</td>
+                <td>Harangi Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>871.42</td>
+                <td>0.22</td>
+                <td>0.1058899112</td>
+                <td><div class="progress-bar"><span class="green" style="width: 50%;">50%</span></div></td>
+            </tr>
+            <tr>
+                <td>Kodagu</td>
+                <td>Harangi Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>871.42</td>
+                <td>0.22</td>
+                <td>0.08263</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 37%;">37%</span></div></td>
+            </tr>
+            <tr>
+                <td>Hassan</td>
+                <td>Hemavathy Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>890.63</td>
+                <td>0.927</td>
+                <td>0.4361637386</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 47%;">47%</span></div></td>
+            </tr>
+            <tr>
+                <td>Hassan</td>
+                <td>Hemavathy Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>890.63</td>
+                <td>0.927</td>
+                <td>0.2702748768</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 29%;">29%</span></div></td>
+            </tr>
+            <tr>
+                <td>Mysuru</td>
+                <td>Kabini Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>696.66</td>
+                <td>0.444</td>
+                <td>0.1967438938</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 44%;">44%</span></div></td>
+            </tr>
+            <tr>
+                <td>Mysuru</td>
+                <td>Kabini Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>696.66</td>
+                <td>0.444</td>
+                <td>0.2018225604</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 45%;">45%</span></div></td>
+            </tr>
+            <tr>
+                <td>Mysuru</td>
+                <td>Krishnaraja Sagar</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>752.5</td>
+                <td>1.163</td>
+                <td>0.4093521239</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 35%;">35%</span></div></td>
+            </tr>
+            <tr>
+                <td>Mysuru</td>
+                <td>Krishnaraja Sagar</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>752.5</td>
+                <td>1.163</td>
+                <td>0.2589755072</td>
+                <td><div class="progress-bar"><span class="red" style="width: 22%;">22%</span></div></td>
+            </tr>
+            <tr>
+                <td>Shivamogga</td>
+                <td>Linganamakki Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>554.43</td>
+                <td>4.294</td>
+                <td>1.594885786</td>
+                <td><div class="progress-bar"><span class="green" style="width: 74%;">74%</span></div></td>
+            </tr>
+            <tr>
+                <td>Shivamogga</td>
+                <td>Linganamakki Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>554.43</td>
+                <td>4.294</td>
+                <td>1.2236656436</td>
+                <td><div class="progress-bar"><span class="green" style="width: 56%;">56%</span></div></td>
+            </tr>
+            <tr>
+                <td>Belagavi</td>
+                <td>Malaprabha Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>633.83</td>
+                <td>0.972</td>
+                <td>0.3533537069</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 36%;">36%</span></div></td>
+            </tr>
+            <tr>
+                <td>Belagavi</td>
+                <td>Malaprabha Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>633.83</td>
+                <td>0.972</td>
+                <td>0.2642985849</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 27%;">27%</span></div></td>
+            </tr>
+            <tr>
+                <td>Shivamogga</td>
+                <td>Mani Dam</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>594.36</td>
+                <td>0.884</td>
+                <td>0.2458354375</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 28%;">28%</span></div></td>
+            </tr>
+            <tr>
+                <td>Shivamogga</td>
+                <td>Mani Dam</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>594.36</td>
+                <td>0.884</td>
+                <td>0.2161784804</td>
+                <td><div class="progress-bar"><span class="red" style="width: 24%;">24%</span></div></td>
+            </tr>
+            <tr>
+                <td>Vijayapura</td>
+                <td>Narayanapura Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>492.25</td>
+                <td>0.863</td>
+                <td>0.3713602305</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 43%;">43%</span></div></td>
+            </tr>
+            <tr>
+                <td>Vijayapura</td>
+                <td>Narayanapura Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>492.25</td>
+                <td>0.863</td>
+                <td>0.1543272727</td>
+                <td><div class="progress-bar"><span class="red" style="width: 18%;">18%</span></div></td>
+            </tr>
+            <tr>
+                <td>Uttara Kannada</td>
+                <td>Supa Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>564</td>
+                <td>4.12</td>
+                <td>1.9135604013</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 46%;">46%</span></div></td>
+            </tr>
+            <tr>
+                <td>Uttara Kannada</td>
+                <td>Supa Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>564</td>
+                <td>4.12</td>
+                <td>1.5510231188</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 37%;">37%</span></div></td>
+            </tr>
+            <tr>
+                <td>Uttara Kannada</td>
+                <td>Tattihalla</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>468.3</td>
+                <td>0.249</td>
+                <td>0.0228378397</td>
+                <td><div class="progress-bar"><span class="red" style="width: 9%;">9%</span></div></td>
+            </tr>
+            <tr>
+                <td>Uttara Kannada</td>
+                <td>Tattihalla</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>468.3</td>
+                <td>0.249</td>
+                <td>0.0213753431</td>
+                <td><div class="progress-bar"><span class="red" style="width: 9%;">9%</span></div></td>
+            </tr>
+            <tr>
+                <td>Koppal</td>
+                <td>Tungabhadra Reservoir</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>497.74</td>
+                <td>3.276</td>
+                <td>0.9029044729</td>
+                <td><div class="progress-bar"><span class="yellow" style="width: 27%;">27%</span></div></td>
+            </tr>
+            <tr>
+                <td>Koppal</td>
+                <td>Tungabhadra Reservoir</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>497.74</td>
+                <td>3.276</td>
+                <td>0.5075608407</td>
+                <td><div class="progress-bar"><span class="red" style="width: 15%;">15%</span></div></td>
+            </tr>
+            <tr>
+                <td>Chitradurga</td>
+                <td>Vanivilasa Sagar</td>
+                <td>CWC</td>
+                <td>2023</td>
+                <td>652.28</td>
+                <td>0.802</td>
+                <td>0.6735430409</td>
+                <td><div class="progress-bar"><span class="green" style="width: 84%;">84%</span></div></td>
+            </tr>
+            <tr>
+                <td>Chitradurga</td>
+                <td>Vanivilasa Sagar</td>
+                <td>CWC</td>
+                <td>2024</td>
+                <td>652.28</td>
+                <td>0.802</td>
+                <td>0.4805325</td>
+                <td><div class="progress-bar"><span class="green" style="width: 60%;">60%</span></div></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

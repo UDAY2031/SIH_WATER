@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Management Table</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="showGraph('damChartCanvas')">Dam Numbers by State</a>
+        <a href="javascript:void(0)" onclick="showGraph('capacityPieChartCanvas')">Water Capacity Distribution</a>
+        <a href="javascript:void(0)" onclick="showGraph('lineChartCanvas')">Population vs. Water Capacity</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+        
+        <h2>Water Resource Management Graphs</h2>
+
+<h3>Dam Numbers by State</h3>
+<canvas id="damChartCanvas" width="40" height="30"></canvas>
+
+<h3>Water Capacity Distribution by State</h3>
+<canvas id="capacityPieChartCanvas" width="40" height="30"></canvas>
+
+<h3>Population vs. Current Water Capacity</h3>
+<canvas id="lineChartCanvas" width="40" height="30"></canvas>
+
+    </div>
+
+    
+    <h1>Water Resource Management Data</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>State Name</th>
+                <th>Dam Number</th>
+                <th>District Number</th>
+                <th>Population</th>
+                <th>Current Capacity (Million Liters)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Andhra Pradesh</td>
+                <td>25</td>
+                <td>13</td>
+                <td>54,397,000</td>
+                <td>12,340</td>
+            </tr>
+            <tr>
+                <td>Arunachal Pradesh</td>
+                <td>3</td>
+                <td>25</td>
+                <td>1,383,727</td>
+                <td>987</td>
+            </tr>
+            <tr>
+                <td>Assam</td>
+                <td>7</td>
+                <td>33</td>
+                <td>36,050,000</td>
+                <td>2,876</td>
+            </tr>
+            <tr>
+                <td>Bihar</td>
+                <td>12</td>
+                <td>38</td>
+                <td>104,099,452</td>
+                <td>7,654</td>
+            </tr>
+            <tr>
+                <td>Chhattisgarh</td>
+                <td>14</td>
+                <td>27</td>
+                <td>25,545,198</td>
+                <td>8,432</td>
+            </tr>
+            <tr>
+                <td>Goa</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1,458,545</td>
+                <td>453</td>
+            </tr>
+            <tr>
+                <td>Gujarat</td>
+                <td>30</td>
+                <td>33</td>
+                <td>60,439,692</td>
+                <td>19,876</td>
+            </tr>
+            <tr>
+                <td>Haryana</td>
+                <td>5</td>
+                <td>22</td>
+                <td>25,351,462</td>
+                <td>1,567</td>
+            </tr>
+            <tr>
+                <td>Himachal Pradesh</td>
+                <td>10</td>
+                <td>12</td>
+                <td>6,864,602</td>
+                <td>2,098</td>
+            </tr>
+            <tr>
+                <td>Jharkhand</td>
+                <td>13</td>
+                <td>24</td>
+                <td>32,988,134</td>
+                <td>4,876</td>
+            </tr>
+            <tr>
+                <td>Karnataka</td>
+                <td>21</td>
+                <td>30</td>
+                <td>61,095,297</td>
+                <td>15,098</td>
+            </tr>
+            <tr>
+                <td>Kerala</td>
+                <td>17</td>
+                <td>14</td>
+                <td>33,406,061</td>
+                <td>6,789</td>
+            </tr>
+            <tr>
+                <td>Madhya Pradesh</td>
+                <td>28</td>
+                <td>52</td>
+                <td>72,626,809</td>
+                <td>21,432</td>
+            </tr>
+            <tr>
+                <td>Maharashtra</td>
+                <td>35</td>
+                <td>36</td>
+                <td>112,374,333</td>
+                <td>29,765</td>
+            </tr>
+            <tr>
+                <td>Manipur</td>
+                <td>4</td>
+                <td>16</td>
+                <td>2,855,794</td>
+                <td>765</td>
+            </tr>
+            <tr>
+                <td>Meghalaya</td>
+                <td>5</td>
+                <td>11</td>
+                <td>2,964,007</td>
+                <td>987</td>
+            </tr>
+            <tr>
+                <td>Mizoram</td>
+                <td>3</td>
+                <td>8</td>
+                <td>1,097,206</td>
+                <td>654</td>
+            </tr>
+            <tr>
+                <td>Nagaland</td>
+                <td>2</td>
+                <td>11</td>
+                <td>1,978,502</td>
+                <td>432</td>
+            </tr>
+            <tr>
+                <td>Odisha</td>
+                <td>20</td>
+                <td>30</td>
+                <td>41,974,218</td>
+                <td>11,543</td>
+            </tr>
+            <tr>
+                <td>Punjab</td>
+                <td>8</td>
+                <td>22</td>
+                <td>27,743,338</td>
+                <td>3,876</td>
+            </tr>
+            <tr>
+                <td>Rajasthan</td>
+                <td>25</td>
+                <td>33</td>
+                <td>68,548,437</td>
+                <td>16,543</td>
+            </tr>
+            <tr>
+                <td>Sikkim</td>
+                <td>2</td>
+                <td>4</td>
+                <td>610,577</td>
+                <td>213</td>
+            </tr>
+            <tr>
+                <td>Tamil Nadu</td>
+                <td>32</td>
+                <td>38</td>
+                <td>72,147,030</td>
+                <td>18,654</td>
+            </tr>
+            <tr>
+                <td>Telangana</td>
+                <td>18</td>
+                <td>33</td>
+                <td>35,193,978</td>
+                <td>9,876</td>
+            </tr>
+            <tr>
+                <td>Tripura</td>
+                <td>4</td>
+                <td>8</td>
+                <td>3,673,917</td>
+                <td>987</td>
+            </tr>
+            <tr>
+                <td>Uttar Pradesh</td>
+                <td>27</td>
+                <td>75</td>
+                <td>199,812,341</td>
+                <td>28,765</td>
+            </tr>
+            <tr>
+                <td>Uttarakhand</td>
+                <td>7</td>
+                <td>13</td>
+                <td>10,086,292</td>
+                <td>3,210</td>
+            </tr>
+            <tr>
+                <td>West Bengal</td>
+                <td>16</td>
+                <td>23</td>
+                <td>91,276,115</td>
+                <td>14,321</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="scripts1.js"></script>
+</body>
+</html>
