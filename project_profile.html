@@ -1,35 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Resource Management</title>
-    <link rel="stylesheet" href="project_profile.css">
+    <title>SIH Project Overview</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #a7c7e7, #a3d9a5);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slide {
+            width: 80%;
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .slide {
+                width: 90%;
+                padding: 15px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            img {
+                margin: 10px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                width: 95%;
+                padding: 10px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Water Resource Management</h1>
-            <p class="subtitle">Sustainable Solutions for a Water-Secure Future</p>
-        </header>
-        <section class="description">
-            <p>
-                Our water resource management system is designed to be adaptable to various sectors and needs. By utilizing 
-                historical data on reservoirs, groundwater, and their capacities, we ensure accurate modeling and forecasting. 
-                Our models provide users with knowledge about water footprints and offer conservation tips that are beneficial 
-                for both users and policymakers.
-            </p>
-            <p>
-                We dynamically adapt to evolving water usage patterns, integrating indigenous knowledge with modern predictive 
-                models. Through <strong>Geo-Ethnographic Data Fusion</strong>, we connect geographical data with cultural and 
-                ethnographic insights, creating a more holistic approach to water resource management.
-            </p>
-            <p>
-                Our system continuously updates models with new data and insights, ensuring precision and adaptability. 
-                By integrating <strong>Explainable AI</strong>, we provide better decision-making tools and policy guidance, 
-                empowering stakeholders with transparent and actionable insights.
-            </p>
-        </section>
+
+    <!-- Slide 1 -->
+    <div class="slide">
+        <h1>SMART INDIA HACKATHON 2024</h1> 
+        <h2>HYDROSCAPE</h2>
+        <p><strong>Problem Statement ID:</strong> SIH1692</p>
+        <p><strong>Problem Statement Title:</strong> Forecasting Future Water Requirements and Assessing Storage Capacities in Reservoirs</p>
+        <p><strong>Theme:</strong> Smart Education</p>
+        <p><strong>PS Category:</strong> Software</p>
+        <p><strong>Team Name:</strong> Drip-outs</p>
     </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h2>Technical Stack & Flowchart</h2>
+        <p>The technical stack involves a range of tools and technologies designed to analyze, forecast, and manage water resources effectively:</p>
+        <ul>
+            <li><strong>Data Collection and Integration:</strong> Python, Web Scraping, MySQL</li>
+            <li><strong>Data Analysis:</strong> R, Numpy, Pandas</li>
+            <li><strong>Machine Learning and AI:</strong> TensorFlow, Keras</li>
+            <li><strong>Data Visualization and Reporting:</strong> Power BI, Matplotlib</li>
+        </ul>
+        <p>This stack supports the processing and analysis of water-related data to predict demand and optimize water management strategies. The flowchart (shown below) further details the process flow, outlining each stage from data collection to reporting.</p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h2>Technical Approach</h2>
+        <p><strong>Water Supply Mapping:</strong> The project identifies connections between dams and districts, analyzing their storage capacities and how they cater to different regions.</p>
+        <p><strong>Water Usage Analysis:</strong> This step evaluates the water demands of various sectors, including agriculture, industry, domestic consumption, and ecological needs. Accurate data on these demands is critical for balancing resource distribution.</p>
+        <p><strong>Water Demand & Sectoral Analysis:</strong> The team calculates water demand by sector, particularly focusing on irrigation and consumption patterns. This analysis ensures that water allocation is optimized for each sector.</p>
+        <p><strong>Strategic Allocation & Management:</strong> Using AI models, the team simulates various scenarios to test different water management strategies. The results are visualized using Power BI to support informed decision-making.</p>
+        <img src="flowchart.jpg" alt="Flowchart Image">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h2>Feasibility and Viability</h2>
+        <p><strong>Analysis of Feasibility:</strong> The project is highly adaptable and can be applied across various sectors and needs. Historical data on dams and water usage is essential for accurate modeling, making this a critical factor for feasibility.</p>
+        <p><strong>Potential Challenges and Risks:</strong> The team identifies two main challenges: adapting to evolving water usage patterns and integrating indigenous knowledge with modern predictive models.</p>
+        <p><strong>Strategies for Overcoming Challenges:</strong> The team plans to use Geo-Ethnographic Data Fusion, which combines geographic and cultural data for better water resource management. They will also continuously update models with new data and insights to stay relevant.</p>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h2>Impact and Benefits</h2>
+        <p><strong>Potential Impact on Target Audience:</strong> The project ensures equitable water distribution and helps prevent shortages. It also supports long-term water management planning and risk mitigation, benefiting both policymakers and communities.</p>
+        <p><strong>Benefits of the Solution:</strong> In addition to practical benefits, the project emphasizes the preservation of cultural and environmental values. By integrating cultural practices with modern water management techniques, the solution promotes a holistic approach to sustainability.</p>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h2>Research and References</h2>
+        <p>This section contains relevant references and research links used in developing the project. Research was conducted on the applications of the problem statements and the target group that is focused on the proposed solution.</p>
+        <p><strong>References: </strong> 
+            India Water Resources Information System (India WRIS): <a href="https://indiawris.gov.in/wris/#/">https://indiawris.gov.in/wris/#/</a><br>
+            Petri, B. Yuce, A. Kwan, and Y. Rezgui, "An Intelligent Analytics System for Real-Time Catchment Regulation and Water Management," in IEEE Transactions on Industrial Informatics, vol. 14, no. 9, pp. 3970-3981, Sept. 2018, doi: 10.1109/TII.2017.2782338<br>
+            P. Ai, C. Xiong, K. Li, Y. Song, S. Gong, and Z. Yue, "Effect of Data Characteristics Inconsistency on Medium and Long-Term Runoff Forecasting by Machine Learning," in IEEE Access, vol. 11, pp. 11601-11612, 2023, doi: 10.1109/ACCESS.2023.3241995.
+        </p>
+    </div>
+
 </body>
+
 </html>
