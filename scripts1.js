@@ -135,3 +135,19 @@ const lineChart = new Chart(ctx3, {
         }
     }
 });
+function scrollToChart(chartId) {
+    const chartElement = document.getElementById(chartId);
+    if (chartElement) {
+        chartElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
