@@ -17,7 +17,7 @@
             <li><a href="login.html"><img src="C:\Users\Neelam Bind\justCodes\ds_code\SIH24\lock1.png" alt="Policy Makers"></a></li>
         </ul>
     <div id="profile-icon">
-        <a href="login.html">
+        <a href="profilepage.html">
         <img src="C:\Users\Neelam Bind\justCodes\ds_code\SIH24\profile.png" alt="Profile Icon">
         </a>
     </div>
@@ -26,15 +26,21 @@
 <!-- Container for search bar and login button -->
 <div id="top-right-container">
     <div id="search-container">
-        <input type="text" id="search-bar" placeholder="Search state">
+        <input type="text" id="search-bar" placeholder="Search state" onkeyup="filterStates()">
+        <div id="dropdown-menu">
+            <ul id="state-list">
+                <!-- State items will be dynamically populated here -->
+            </ul>
+        </div>
         <button id="search-button">
             <img src="C:\Users\Neelam Bind\Downloads\glass.png" alt="Search">
         </button>
     </div>
     <a href="login.html"><button id="login-button">Login</button></a>
 </div>
+
 <div id="map-container-wrapper">
-<div id="map-title">Number of Dams in Each State</div>
+<!-- <div id="map-title">Number of Dams in Each State</div> -->
 <div id="main-container">
     <div id="map-container">
         <!-- SVG map with placeholders for actual paths -->
@@ -109,7 +115,7 @@
     </div>
 <!-- Publisher Info Section -->
 <footer class="publisher-info">
-    <div class="container">
+    <div class="container" style="margin-top: 115px;">
         <h3>About Us</h3>
         <p>HydroScape is developed and managed by the Drips-out Team.</p>
         <p>Our mission is to leverage cutting-edge technology and data analytics to optimize water management and ensure sustainable water use.</p>
@@ -128,7 +134,9 @@
         </p>
     </div>
 </footer>
-
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/d5876fdb-e42b-4eca-b3e3-bb4f62ea8086/webchat/config.js" defer></script>
     <script src="scripts.js"></script>
+        
 </body>
 </html>
