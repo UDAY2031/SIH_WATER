@@ -85,6 +85,7 @@ body {
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
     margin-right: 20px; 
+    z-index:-1000;
 }
 
 /* Styling the search input field */
@@ -373,4 +374,67 @@ path:hover {
     width: 100%; /* Make the image fill the container */
     height: 100%; /* Make the image fill the container */
     object-fit: cover; /* Ensure the image covers the container */
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 40px; /* Adjust based on input height */
+    left: 0;
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+#state-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#state-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#state-list li:hover {
+    background-color: #f0f0f0;
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .header {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .header {
+        font-size: 1.6rem;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.4rem;
+    }
+
+    .sidebar, .content {
+        padding: 0.25rem;
+    }
 }
